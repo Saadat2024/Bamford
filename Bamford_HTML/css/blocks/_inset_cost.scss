@@ -1,0 +1,190 @@
+.cost {
+    margin-bottom: 250px;
+
+    .txt {
+        h2 {
+            color: $ct;
+            font-weight: 400;
+        }
+    }
+
+    .title_section {
+        margin-bottom: 60px;
+
+        h2 {
+            color: $c1;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    }
+
+    .inset_table {
+        h4 {
+            color: $c1;
+        }
+
+        .table {
+            border: none;
+            margin-bottom: 70px;
+
+            tbody {
+                tr {
+                    &:nth-child(odd) td {
+                        background: rgba(195, 145, 255, .1);
+                    }
+
+                    &:nth-child(even) td {
+                        background: #fff;
+                    }
+
+                    td {
+                        padding: 15px;
+                        border: none;
+                        font-size: 18px;
+
+                        &:last-child {
+                            text-align: right;
+                            padding-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 1440px) {
+        margin-bottom: 100px;
+    }
+
+    &.pp {
+
+        .txt {
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        @media all and (max-width: 1280px) {
+            padding-bottom: 300px;
+        }
+
+        @media all and (max-width: 1280px) {
+            padding-bottom: 200px;
+        }
+    }
+}
+
+.page-template-main-form {
+    .cost {
+        padding-bottom: 410px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/instagram-mask.svg);
+            background-size: cover;
+            background-position: bottom;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            @media all and (max-width: 991px) {
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                mask-repeat: no-repeat;
+            }
+
+            @media all and (max-width: 767px) {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                mask-image: url(../images/curve-mask-3.svg);
+                -webkit-mask-image: url(../images/curve-mask-3.svg);
+                mask-size: cover;
+                -webkit-mask-size: cover;
+                mask-position: bottom;
+                -webkit-mask-position: bottom;
+                opacity: 0.2;
+                z-index: -1;
+                background: linear-gradient(360deg, #623A95 -90.16%, rgba(98, 58, 149, 0) 80.09%);
+
+            }
+
+        }
+
+        @media all and (max-width: 1180px) {
+            padding-bottom: 200px;
+        }
+
+        @media all and (max-width: 991px) {
+            padding-bottom: 150px;
+            margin-bottom: 100px;
+        }
+
+        @media all and (max-width: 767px) {
+            padding-bottom: 100px;
+        }
+    }
+}
+
+.pp {
+    &.cost {
+        margin-bottom: 90px;
+
+        .txt {
+            padding: 30px 50px 15px 0;
+        }
+    }
+}
+
+.sbs {
+    &.pp {
+        &.cost {
+            .txt {
+                margin-top: 0;
+
+                h2 {
+                    max-width: 100%;
+                }
+            }
+
+            .img {
+                transform: translateX(131px);
+            }
+
+            @media (max-width: 1280px) {
+                .img {
+                    transform: none;
+                }
+            }
+
+            @media (max-width: 767px) {
+
+                .txt {
+                    padding: 38px 0 15px;
+
+                    h3 {
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                    }
+
+                    h2 {
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        margin-bottom: 33px;
+                    }
+                }
+
+                .cnt {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

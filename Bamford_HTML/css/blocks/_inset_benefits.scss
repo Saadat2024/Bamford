@@ -1,0 +1,74 @@
+.inset_benefits {
+   
+    position: relative;
+    overflow: hidden;
+   .cnt{
+    padding-top   :8%;
+    padding-bottom: 8%;
+    background: url(../images/why-bg.png) right bottom no-repeat scroll;
+   }
+
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .counter-list {
+        counter-reset  : section;
+        list-style-type: none;
+        @include flexbox();
+        @include justify-content(flex-start);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        font-size: 18px;
+    }
+
+    li {
+        flex     : 0 0 33.33%;
+        max-width: 33.33%;
+        position: relative;
+        padding-top: 50px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+        &::before {
+            counter-increment: section;
+            content          : "0" counters(section, ".") " ";
+            font-size        : 80px;
+            font-weight      : 100;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 85px;
+            opacity: .3;
+            color: $c1;
+        }
+        h3{
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: $c1;
+        }
+        p{
+            line-height: 27px;
+            strong{
+                font-weight: 600;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        .col-md-9 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    @media (max-width: 767px) {
+        padding:50px 0;
+        li {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}

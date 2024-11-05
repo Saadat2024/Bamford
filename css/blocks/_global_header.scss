@@ -1,0 +1,556 @@
+.page-template-home {
+  .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+}
+
+
+// desktop_header
+.desktop_header {
+
+  //TOP BAR Start
+  .top {
+    background: $c1;
+    padding: 12px 0;
+
+    .cnt {
+      position: relative;
+
+      @media (max-width:1366px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    }
+
+  }
+
+  .bot {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    //@extend .gradient12;
+  }
+
+  .locations_details {
+    @include flex-block();
+    transform: translateX(10px);
+
+    p {
+      color: $cf;
+      position: relative;
+      display: block;
+      margin: 0;
+      margin-left: 16px;
+      font-size: 16px;
+      line-height: 19px;
+
+      a {
+        display: block;
+        color: $cf;
+        position: relative;
+
+        em img {
+          margin-right: 4px;
+          vertical-align: baseline;
+        }
+
+      }
+    }
+  }
+
+  .more_menu {
+    margin-left: 10px;
+
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.08em;
+      color: $cf;
+      text-transform: uppercase;
+
+      img {
+        margin-right: 6px;
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    transition: .3s all;
+    max-width: 100%;
+    margin-left: 10px !important;
+  }
+
+  //Main Menu
+  .navigation {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    margin-top: 15px;
+
+    a:not(.btn) {
+      display: block;
+      padding: 10px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      //letter-spacing: -0.02em;
+      color: $ct;
+
+      &:hover {
+        color: $ct;
+      }
+    }
+
+    li {
+      position: relative;
+
+      &:last-child {
+        a {
+          margin-left: 16px;
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        @extend .gradient08;
+        z-index: 100;
+        display: none;
+        border-radius: 8px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top-left-radius: 0;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: -7px;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7px 0 0 7px;
+          border-color: transparent transparent transparent rgba(98, 58, 149, 0.6);
+        }
+
+        li {
+          position: relative;
+
+          a {
+            color: $cf !important;
+            white-space: nowrap;
+            padding: 8px 32px !important;
+            padding-left: 40px;
+            margin-left: 0 !important;
+
+            &:hover {
+              background-color: $c1;
+              color: $c1;
+            }
+          }
+        }
+
+
+      }
+
+      &:last-of-type {
+        ul {
+          left: initial;
+          right: 0;
+        }
+      }
+
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+
+      &.has_child {
+        >a {
+          &:after {
+            content: "";
+            background-image: url(../images/icon-chevron-down.svg);
+            display: inline-block;
+            width: 12px;
+            height: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            //position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            @include transition(all .3s linear);
+            float: right;
+            //margin-left:4px;
+            margin-top: 16px;
+          }
+
+          &:hover {
+            &::after {
+              transform: rotate(180deg) translateY(75%);
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+
+  //Main Menu Ends
+  @media (min-width: 1200px) and (max-width: 1350px) {
+    .navigation a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .top {
+      padding-top: 15px;
+    }
+
+    .bot {
+      .d-flex {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .lg_logo {
+      width: 175px;
+    }
+
+    .navigation a {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &.pp {
+    .bot .lg_logo {
+      margin-top: 1px;
+      margin-left: -10px;
+    }
+
+    .more_menu {
+      margin-left: 1px;
+      margin-top: -3px;
+    }
+
+    .locations_details {
+      margin-right: 10px;
+    }
+
+    .navigation {
+      margin-top: 12px;
+    }
+  }
+}
+
+// desktop_header ends
+
+
+// mobile_header
+//Humburger animation
+.icon-humburger-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  // background: $c1;
+  @extend .gradient08;
+  border-radius: 33.5px;
+  padding-top: 9px;
+}
+
+.icon-humburger {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  position: relative;
+  margin: auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  top: -3px;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: $cf;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(even) {
+      left: 50%;
+      border-radius: 0 9px 9px 0;
+    }
+
+    &:nth-child(odd) {
+      left: 0px;
+      border-radius: 9px 0 0 9px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      top: 0px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      top: 6px;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 13px;
+    }
+  }
+
+  &.open {
+    span {
+
+      &:nth-child(1),
+      &:nth-child(6) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(1) {
+        left: 1px;
+        top: 5px;
+      }
+
+      &:nth-child(2) {
+        left: calc(50% - 2px);
+        top: 5px;
+      }
+
+      &:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+      }
+
+      &:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+      }
+
+      &:nth-child(5) {
+        left: 1px;
+        top: 12px;
+      }
+
+      &:nth-child(6) {
+        left: calc(50% - 1px);
+        top: 12px;
+      }
+    }
+  }
+}
+
+//Humburger animation end
+.mobile_header {
+  position: relative;
+
+  .xs_logo {
+    max-width: 163px;
+  }
+
+  .xs_controls {
+    width: 100%;
+  }
+
+  .top {
+    padding: 7px 20px;
+    background-color: $c1;
+
+    //padding-right: 30px;
+    a {
+      display: block;
+      position: relative;
+      margin-left: 5px;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      em {
+        @include transition(all .3s linear);
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+        max-height: 25px;
+
+        img {
+          vertical-align: initial;
+        }
+      }
+
+      &:hover {
+        em {
+          box-shadow: inset -4px -4px 8px #B1F1F2, inset 4px 4px 8px #84B4B5;
+        }
+      }
+    }
+
+  }
+
+  .bot {
+    padding: 17px 24px;
+
+    .logo img {
+      max-width: 120px;
+    }
+  }
+
+  .xs_main_nav {
+    background-color: $c1;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    right: 0;
+    z-index: 30;
+    transition: .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    li {
+      position: relative;
+
+      ul {
+        display: none;
+      }
+
+      >ul {
+        background-color: $cf;
+        margin: 0 24px;
+        border-radius: 4px;
+        padding: 12px 0;
+        box-shadow: 0px 20px 16px -8px rgba(0, 0, 0, 0.25);
+
+        li {
+          position: relative;
+
+          a {
+            color: $ct;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding: 12px 24px;
+      color: $cf;
+      font-size: 14px;
+      line-height: 1.1;
+
+      &.btn {
+        margin: 10px;
+      }
+    }
+
+    .menu_expander {
+      color: $cf;
+      position: absolute;
+      right: 20px;
+      top: 8px;
+      z-index: 31;
+      cursor: pointer;
+
+      &::before {
+        font-size: 30px;
+      }
+
+      &.toggled {
+        &:before {
+
+          content: "\f106";
+        }
+      }
+
+    }
+
+  }
+}
+
+// mobile_header ends
+
+// sticky header
+.default_sticky {
+  &.affix {
+    position: fixed !important;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 30;
+    background-color: $cf;
+    box-shadow: 0px 20px 24px 4px rgba(135, 135, 135, 0.1);
+    backdrop-filter: blur(13.5px);
+    @include transition(all .3s linear);
+
+    .desktop_header {
+      padding-bottom: 0;
+
+      .logo {
+        max-width: 150px;
+      }
+
+      .navigation li {
+        a:not(.btn) {
+          color: $ct;
+        }
+
+        ul a:not(.btn) {
+          color: #fff;
+        }
+      }
+
+      .top {
+        display: none;
+        // padding-top: 15px;
+        // @include transition(all .3s linear);
+      }
+
+      .bot {
+        //padding: 15px 0;
+        padding-bottom: 15px;
+        @include transition(all .3s linear);
+      }
+    }
+  }
+}
+
+// sticky header ends

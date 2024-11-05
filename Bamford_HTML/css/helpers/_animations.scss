@@ -1,0 +1,125 @@
+// Animations
+@keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+      bottom: -30px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @-webkit-keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+      bottom: -30px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      bottom: -100px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+      bottom: -100px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @keyframes fadeIn3 {
+    0% {
+      opacity: 0;
+      bottom: -100px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @-webkit-keyframes fadeIn3 {
+    0% {
+      opacity: 0;
+      bottom: -100px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  @keyframes floating {
+    from {
+      transform: translate(0, 0);
+    }
+    55% {
+      transform: translate(0, 15px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+  @-webkit-keyframes floating {
+    from {
+      transform: translate(0, 0);
+    }
+    55% {
+      transform: translate(0, 15px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      @include  transform (translateY(100%));
+    }
+    100% {
+      opacity: 1;
+      @include  transform (translateY(0%));
+    }
+  }
+  @-webkit-keyframes slideIn {
+    0% {
+      opacity: 0;
+      @include  transform (translateY(100%));
+    }
+    100% {
+      opacity: 1;
+      @include  transform (translateY(0%));
+    }
+  }
+  @keyframes slideIn2 {
+    0% {
+      opacity: 0;
+      @include  transform (translateY(-100%));
+    }
+    100% {
+      opacity: 1;
+      @include  transform (translateY(0%));
+    }
+  }
+  @-webkit-keyframes slideIn2 {
+    0% {
+      opacity: 0;
+      @include  transform (translateY(-100%));
+    }
+    100% {
+      opacity: 1;
+      @include  transform (translateY(0%));
+    }
+  }
+  
+   //</section-fold> ====== Animations End ======

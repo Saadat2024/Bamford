@@ -1,0 +1,202 @@
+.global_footer_form {
+  background-color: $c2;
+  padding: 260px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  h3,h2{
+    margin-bottom: 16px;
+  }
+  h2 {
+    color: $ct;
+  }
+  .img {
+    margin-right: -70px !important;
+    margin-top: 20px !important;
+    position: relative;
+   
+    &::before {
+      content: '';
+      position: absolute;
+      width: 506px;
+      height: 506px;
+      left: 50%;
+      margin-left: -253px;
+      top:84px;
+      z-index: 0;
+      background: #BAFEFF;
+      filter: blur(75px);
+      opacity: .9;
+      border-radius: 50%;
+    }
+    img {
+      display: inline-block;
+      margin: auto;
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+
+  .form-row {
+    max-width: 366px;
+  }
+
+  .form {
+    padding-right: 25px;
+    position: relative;
+    z-index: 4;
+
+    .select {
+      &:after {
+        border-color: $c1 transparent transparent transparent;
+      }
+    }
+
+    .form_date {
+      background-image: url(../images/icon-cal-blue.svg) !important;
+    }
+    .btn{
+     margin-top: 40px;
+    }
+  }
+
+
+  @media (max-width: 1440px) {
+    .cnt {
+      height: 670px;
+    }
+
+    .lg-img {
+      background-position-x: 20vw;
+    }
+  }
+
+  @media(max-width:1180px) {
+    .lg-img {
+      background-size: auto 100%;
+    }
+  }
+
+  @media (max-width:990px) {}
+}
+
+
+
+//main form hero
+.main_form_hero {
+  height: 1200px;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    background: linear-gradient(270deg, rgba(175, 205, 255, 0) 0%, #E4EEFF 100%, #FFFFFF 100%);
+  }
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    content: "";
+    z-index: 3;
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    ;
+  }
+
+  &:hover {
+    .lg-img {
+      @include transform(scale(1.05));
+    }
+  }
+
+  .cnt {
+    height: inherit;
+  }
+
+  @media (max-width: 1440px) {
+    .lg-img {
+      background-position: center right !important;
+      background-size: cover !important;
+    }
+  }
+
+  @media (max-width: 1180px) {
+    .lg-img {
+      background-position-y: center !important;
+      background-position-x: -35vw !important;
+      //background-size:cover!important;
+    }
+  }
+
+  @media(max-width:990px) {
+    height: auto;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.booking-remote-dr-hero {
+  .doc_img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: relative;
+    @include flexbox();
+    @include align-items(flex-end);
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 65.62%);
+    }
+  }
+
+  .txt {
+    padding: 40px 10vw;
+    position: relative;
+    z-index: 3;
+
+    h1,
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 130%;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $ct;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+
+  .smilemate_script {
+    padding: 30px;
+    text-align: center;
+  }
+
+  @media(max-width:767px) {
+    .doc_img {
+      background-position-x: -60vw;
+      height: 700px;
+    }
+
+    .txt {
+      padding: 0;
+      padding-bottom: 30px;
+    }
+  }
+}

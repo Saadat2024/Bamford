@@ -1,0 +1,59 @@
+//Fonts
+
+
+$f1: 'Fredoka', sans-serif;
+$f2: 'Fredoka', sans-serif;
+$f3: 'Fredoka', sans-serif;
+
+.f1 {font-family: $f1;};
+.f2 {font-family: $f2;};
+.f3 {font-family: $f3;};
+
+// COLORS
+$ct: #333333; // Base black
+$c1:  #623A95; // purple
+$c2: #00AA9E; // teal
+$c3: #59A0D1;  // blue
+$c4: #8A5DC5; // light purple
+$c5: #77787B; //brown
+$c6: #F0F0F0; // light Grey v3
+$c7: #f2f2f2; //
+$c0: #000;
+$cf: #fff; // White
+
+$g01: #3595D9 24.43%, #623A95 78.56%; 
+$g02: rgba(138, 84, 207, 0.88) 20.5%,#3FA2E9 102.04%; 
+$g03: #8A5DC5, #623A95 42.92%;
+$g04: #04D8C9 0%,#00AA9E 56.46%;
+$g05: #AE77F4 35.74%,#88CEF0 66.02%, rgba(4, 216, 201, 0) 99.55%;
+$g06: #623A95 0%, rgba(98, 58, 149, 0.2) 100%;
+$g07: #88CEF0, #59A0D1;
+$g08: rgba(98, 58, 149, 0.6) 0%, #623A95 100%;
+$g09: rgba(98, 58, 149, 0.6) 16.41%, #623A95;
+$g10: #623A95 0.79%, #308ED1 96.25%;
+$g11: #623A95 -90.16%,  rgba(98, 58, 149, 0) 80.09%;
+$g12: rgba(138, 84, 207, 0.88) 18.77%, #3FA2E9 85.12%;
+$g13: #623A95 23.62%,rgba(98, 58, 149, 0) 98.87%;
+$g14: #623A95 17.46%, #CBA2FF 105.17%;
+$g15:  #308ED1 46.22%, rgba(48, 142, 209, 0.77) 86.08%;
+$g16: #308ED1 23.62%,rgba(98, 58, 149, 0) 98.87%;
+
+
+
+.bc1{background-color: $c1;}
+.bc2{background-color: $c2;}
+.bc3{background-color: $c3;}
+.bc4{background-color: $c4;}
+.bc5{background-color: $c5;}
+.bc6{background-color: $c6;}
+.bc7{background-color: $c7;}
+.bf{background-color: $cf;}
+
+.cf{color: #fff;}
+.ct{color: $ct;}
+.c1{color: $c1;}
+.c2{color: $c2;}
+.c3{color: $c3;}
+.c5{color: $c5;}
+.c6{color: $c6;}
+.c7{color: $c7;}

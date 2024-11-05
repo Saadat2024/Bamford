@@ -1,0 +1,39 @@
+.inset_gallery{
+    padding: 6% 0;
+    position: relative;
+    h2{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .row{
+        flex-wrap: wrap;
+        .col{
+            margin-bottom: 30px;
+            max-width: 20%;
+            flex: 0 0 20%;
+            a{
+                display: block;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width:767px ) {
+        .row{
+            display:block;
+            .col{
+                width:100%;
+                max-width:100%;
+                margin-bottom: 30px;
+                a{
+                    display: block;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

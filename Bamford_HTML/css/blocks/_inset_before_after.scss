@@ -1,0 +1,730 @@
+.inset_before_after {
+  padding-top: 79px;
+  padding-bottom: 87px;
+  position: relative;
+  height: 1100px;
+  overflow: hidden;
+  top: 40px;
+  margin-bottom: 150px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 67%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 67%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 67%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/curve-bot.svg);
+    background-size: cover;
+    background-position: bottom;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  >.cnt {
+    position: relative;
+    z-index: 3;
+    max-width: none;
+  }
+
+
+  // // @extend .global-space;
+  * {
+    color: #fff;
+  }
+
+  .title_section {
+    max-width: 750px;
+    margin-bottom: 30px;
+    position: relative;
+    transform: translateX(-649px);
+    left: 50%;
+    margin-top: 20px;
+
+
+    @media all and (max-width: 1366px) {
+      transform: none;
+      left: 0%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-size: 40px;
+    font-weight: 500;
+    color: $c1;
+  }
+
+  p {
+    color: #222;
+  }
+
+  .btns {
+    position: relative;
+    margin-top: -30px;
+
+    .btn {
+      margin-left: 7px;
+    }
+  }
+
+
+  @media all and (max-width: 991px) {
+    &::before {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .btns {
+      padding-bottom: 30px;
+    }
+  }
+
+}
+
+
+//before_after
+.before_after_slider {
+  transform: translateX(-652px);
+  left: 50%;
+  // max-width: 1792px;
+  // margin-left: calc((100% - 1304px) / 2);
+
+  @media all and (max-width: 1366px) {
+    transform: none;
+    left: 0%;
+  }
+
+  p {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .item {
+    margin-right: 40px;
+
+    @media all and (max-width: 1366px) {
+      margin: 0 20px;
+    }
+  }
+
+}
+
+// before_after END
+
+// ba_comparision
+.ba_comparision {
+  padding-top: 20px;
+  margin-bottom: 130px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 65%;
+    height: 127px;
+    background: linear-gradient(224.34deg, #3595D9 24.43%, #623A95 78.56%);
+    opacity: 0.6;
+    left: 80px;
+    bottom: -20px;
+    filter: blur(40px);
+    z-index: -1;
+    border-radius: 8px;
+
+    @media all and (max-width: 1440px) {
+      width: 70%;
+      left: 60px;
+    }
+  }
+
+  // overflow: hidden;
+  .panel-container {
+    display: flex;
+    flex-direction: row;
+    xtouch-action: none;
+    position: relative;
+    max-width: 632px;
+    border-radius: 0px;
+  }
+
+  .content {
+    border-radius: 0px 0px 10px 10px;
+    padding: 59px 69px 31px;
+    margin-top: -10px;
+    background: linear-gradient(160deg, rgba(98, 58, 149, 0.6) 0%, #623A95 100%);
+
+    h5 {
+      margin: 0;
+      font-weight: lighter;
+    }
+
+    h4 {
+      font-size: 17px;
+      font-weight: 200;
+    }
+
+    .col {
+      padding: 0;
+    }
+
+    @media all and (max-width: 1280px) {
+      padding: 59px 50px 31px;
+    }
+  }
+
+  .panel-left {
+    flex: 0 0 auto;
+    /* only manually resize */
+    width: 50%;
+    white-space: nowrap;
+    color: white;
+    max-width: calc(100% - 1px);
+
+    img {
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .panel-right {
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .splitter {
+    flex: 0 0 auto;
+    width: 1px;
+    height: auto;
+    cursor: col-resize;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0px;
+      height: calc(100% + 30px);
+      top: -15px;
+      position: relative;
+      z-index: 20;
+      border-right: 1px dashed $c1;
+
+    }
+
+    .handle {
+      background: url(../images/handle.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 0px;
+      top: calc(50% - 0px);
+      @include transform (translate(-50%, -50%));
+      z-index: 20;
+    }
+  }
+
+  @media all and (max-width: 991px) {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1440px) {
+  .inset_before_after {
+    padding: 60px 40px;
+  }
+
+
+  .panel-container {
+
+    .panel-left img,
+    .panel-right img {
+      max-width: 380px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .page-template-home {
+    .inset_before_after {
+      padding-top: 80px;
+    }
+  }
+
+  .panel-container {
+
+    .panel-left img,
+    .panel-right img {
+      max-width: 330px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .panel-container {
+
+    .panel-left img,
+    .panel-right img {
+      max-width: 270px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .inset_before_after {
+    padding: 80px 0px;
+    height: auto;
+    margin-bottom: 80px;
+
+    .title_section {
+      max-width: 550px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .inset_before_after {
+    background-image: none;
+    margin-bottom: 100px;
+
+    &:before {
+      background-image: url(../images/ba-bot-mob.svg);
+      background-size: cover;
+    }
+
+    .content {
+      padding: 40px 60px 30px;
+
+      h4 {
+        font-size: 16px;
+      }
+
+      .col h4:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .title_section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-top: 17px;
+    }
+
+    .cus-arrows {
+      text-align: center;
+
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        top: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -30px;
+      }
+
+      .slick-next {
+        // transform: translateX(50px);
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .before_after_slider {
+
+    .slick-prev {
+      top: auto !important;
+      bottom: -75px;
+    }
+
+    .slick-next {
+      bottom: -75px;
+    }
+
+    .slick-list {
+      padding: 0px 0% !important;
+    }
+
+    .item {
+      margin: 0;
+    }
+  }
+
+  .ba_comparision {
+    // width: 100% !important;
+
+    .panel-left img,
+    .panel-right img {
+      height: auto;
+      max-width: 342px;
+    }
+
+    .splitter:before {
+      height: calc(100% + 21px);
+      top: -12px;
+    }
+
+    h5 {
+      margin: 0;
+    }
+  }
+}
+
+// ba_comparision ENd
+
+
+//Before After Detail
+.before_after_detail {
+  background: none;
+  text-align: left;
+  padding: 75px 0;
+
+  .before_after {
+    padding: 0;
+  }
+
+  .patient_img {
+    //padding:0;margin:0 15px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 600px;
+
+    .img {
+      display: none;
+    }
+  }
+
+  .ba_comparision {
+    .panel-container {
+      max-width: 810px;
+
+    }
+  }
+
+  .slider_controls {
+    width: calc(100% + 30px);
+
+    .flex {
+      @include align-items(flex-end);
+      @include justify-content(space-between);
+    }
+
+    margin:0 -15px;
+
+    .node {
+      font-size: 112px;
+      line-height: 92px;
+      font-weight: 300;
+      color: #C5EBF2;
+    }
+
+    .node_total {
+      background-color: $c1;
+      display: inline-block;
+      width: 100px;
+      height: 55px;
+      color: #C5EBF2;
+      font-size: 18px;
+      line-height: 18px;
+      padding-top: 22px;
+      text-align: center;
+      margin-bottom: -1px;
+      ;
+    }
+  }
+
+  .slick-arrow {
+    right: 15px;
+    top: initial;
+    bottom: 0;
+    border-radius: 0;
+
+    &.slick-prev {
+      left: 0;
+      right: initial
+    }
+  }
+
+  .slide_bot {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .txt {
+    h3 {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: $c1;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      color: #4E4E4E;
+
+      small {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .patient_detail {
+    margin-top: 35px;
+    width: 260px;
+    @include flexbox;
+    @include justify-content(space-between);
+
+    p {
+      margin: 0
+    }
+  }
+
+  .testimonial_txt {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    //read more
+    .read_more,
+    .read_less {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      color: $c1;
+      padding: 10px;
+      padding-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        color: $c2;
+      }
+    }
+
+    .read_less {
+      display: none;
+      padding-top: 10px;
+    }
+
+    &.expanded {
+      height: auto;
+
+      .read_more {
+        display: none;
+      }
+
+      .read_less {
+        display: block;
+        position: static;
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+@media all and (max-width: 1500px) {
+  .before_after_detail {
+    .ba_comparision {
+
+      .panel-left img,
+      .panel-right img {
+        height: auto;
+        max-width: initial;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .inset_before_after {
+    height: auto;
+    padding-bottom: 200px;
+
+    .slick-prev {
+      right: 80px;
+    }
+
+    .slick-next {
+      right: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .before_after_detail {
+    .slide_bot {
+      margin: 0 auto;
+      margin-top: 30px;
+
+      .col-md-5,
+      .col-md-7 {
+        width: 100%;
+        max-width: 100%;
+
+      }
+
+      .align_bottom {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .before_after_detail {
+    .slide_bot {
+      max-width: 90%;
+    }
+
+    .slick-arrow {
+      width: 6%;
+      height: 60px;
+      top: 50%;
+
+      &:before {
+        font-size: 40px !important;
+      }
+
+      &.slick-next {
+        right: 0;
+      }
+    }
+
+    .patient_img {
+      height: 300px;
+      margin-bottom: 20px;
+      padding: 0;
+      min-width: 100%;
+    }
+
+    .col-sm-7 {
+      padding: 0;
+      height: auto !important;
+    }
+
+    .slider_controls {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.pp {
+  &.inset_before_after {
+    margin-bottom: 172px;
+    padding-top: 85px;
+
+    .title_section {
+      margin: 20px 0;
+
+
+      h2 {
+        margin-bottom: 8px;
+      }
+    }
+
+    .ba_comparision {
+      padding-top: 30px;
+
+      .content {
+        padding: 58px 69px 31px 70px;
+      }
+    }
+
+    .btns {
+      margin-top: -50px;
+    }
+
+
+    @media all and (max-width: 1920px) {
+      .before_after_slider {
+        max-width: 1792px;
+
+        .item {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media all and (max-width: 767px) {
+      padding: 42px 0 50px;
+      margin-bottom: 120px;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .ba_comparision {
+        padding-top: 22px;
+        margin-bottom: 145px;
+
+        .content {
+          padding: 42px 65px 10px 60px;
+
+          h4 {
+            margin-bottom: 25px;
+          }
+
+          .col {
+            h4:last-of-type {
+              margin-right: -20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Before After Detail END

@@ -1,0 +1,386 @@
+.hero_booking.sbs:not(.flip) {
+
+    .col-md-6 {
+        align-items: inherit;
+
+
+    }
+
+    .txt {
+        h2 {
+            width: 120%;
+            font-weight: 500;
+        }
+    }
+
+    .form_content {
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    .form-row {
+        .row {
+            flex-direction: inherit;
+        }
+
+        p {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+    }
+
+    .btn {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .testimonials__slider {
+        padding-bottom: 0;
+
+        .test_slide {
+            width: 100%;
+        }
+    }
+
+
+    .privacy {
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 32px 10px 20px 53px;
+        background-image: url(../images/privacy.svg);
+        background-repeat: no-repeat;
+        background-position: 25px 30px;
+        margin-bottom: 0 !important;
+
+
+        p {
+            margin-bottom: 10px;
+            font-size: 12px;
+
+            img {
+                padding-right: 5px;
+            }
+        }
+    }
+
+    @media all and (max-width: 1280px) {
+        .txt {
+            padding-left: 0;
+
+            h2 {
+                width: 100%;
+            }
+        }
+    }
+
+    @media all and (max-width: 991px) {
+        padding-top: 20px;
+    }
+
+    @media all and (max-width: 767px) {
+
+        .btn {
+            padding: 16px 15px;
+        }
+
+    }
+}
+
+
+.new_what_happens {
+    position: relative;
+    padding-top: 124px;
+    padding-bottom: 68px;
+
+    h2 {
+        margin-bottom: 70px;
+        color: $c2;
+    }
+
+    .happen-info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .hap-con {
+            a {
+                color: $ct;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: left;
+                display: block;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    .icon {
+                        transform: scale(1.07);
+                        box-shadow: 0px 48px 68px -24px rgba(159, 217, 218, .7), -8px -8px 24px rgba(255, 255, 255, .7);
+                    }
+                }
+
+                .icon {
+                    border-radius: 50%;
+                    background-color: $c6;
+                    width: 196px;
+                    height: 196px;
+                    font-size: 5px;
+                    color: $cf;
+                    display: inline-flex;
+                    display: -webkit-inline-flex;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    align-items: center;
+                    -moz-justify-content: center;
+                    -ms-justify-content: center;
+                    justify-content: center;
+                    -ms-flex-pack: center;
+                    transition: all 0.3s linear;
+                    box-shadow: -8px -8px 16px rgba(255, 255, 255, .5), 8px 8px 16px rgba(0, 0, 0, .1);
+                }
+
+                p {
+                    padding-top: 25px;
+                    padding-right: 110px;
+                    transition: all 0.3s linear;
+                }
+            }
+        }
+    }
+
+    @media(max-width:990px) {
+        text-align: center;
+
+        h2 {
+            strong {
+                display: block;
+            }
+        }
+
+        .happen-info {
+            display: block;
+
+            .hap-con {
+                margin-bottom: 50px;
+
+                a {
+                    text-align: center;
+
+                    p {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:767px) {
+        padding: 40px 0;
+        text-align: left;
+
+        h2 {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 32px;
+        }
+
+        .happens-wrap {
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+
+        .happen-info {
+            .hap-con {
+                margin-bottom: 32px;
+
+                a {
+                    text-align: left;
+
+                    p {
+                        padding-top: 24px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//Perfect Pixel Fixes
+.page-template-main-form {
+
+    // main {
+    //     overflow:hidden;
+    // }
+    @media(min-width:991px) {
+        .dr-featured {
+            margin-top: -17px;
+        }
+
+        // .instagram_feed {
+        //     margin-top: 124px;
+
+        //     .title-section {
+        //         margin-bottom: 20px;
+        //     }
+        // }
+
+        .meet-dog {
+            margin-top: 205px;
+        }
+    }
+}
+
+.sbs {
+    &.pp {
+        &.hero_booking {
+            padding-bottom: 35px;
+            margin-bottom: 0;
+
+            .form-row {
+                p {
+                    margin-top: -5px;
+                }
+            }
+
+            .txt {
+                padding: 13px 50px 13px 0px;
+                margin-top: 0;
+
+                h2 {
+                    max-width: 120%;
+                }
+            }
+
+            .img {
+                padding-top: 15px;
+                transform: none;
+
+                img {
+                    max-width: none;
+                }
+            }
+
+            .testimonials__slider {
+                .test_slide {
+                    .items {
+                        margin-left: 0px;
+                        margin-top: 102px;
+
+                        h6 {
+                            margin-bottom: 12px;
+                            margin-left: 0;
+                        }
+
+                        .rating {
+                            margin-bottom: 32px;
+                            margin-left: 2px;
+                        }
+
+                        p {
+                            margin-bottom: 16px;
+                            width: 110%;
+
+                        }
+                    }
+                }
+            }
+
+            .privacy {
+                p {
+                    margin-bottom: 7px !important;
+                }
+            }
+
+            .btn {
+                margin-bottom: 19px !important;
+            }
+
+            @media all and (max-width: 1280px) {
+                .img {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                padding-bottom: 40px;
+
+                .cnt {
+                    padding: 0;
+                }
+
+                .txt {
+                    padding: 25px 0;
+
+                    h2 {
+                        width: 110%;
+                        letter-spacing: -0.7px;
+                        margin-bottom: 7px;
+                    }
+
+                    .form_content {
+                        p:last-child {
+                            display: none;
+                        }
+                    }
+                }
+
+                .form-row {
+                    input {
+                        padding-top: 13px;
+                        padding-bottom: 12px;
+                    }
+                }
+
+                .img {
+                    padding-top: 0;
+                }
+
+                .testimonials__slider {
+                    .test_slide {
+                        .items {
+                            margin-top: 90px;
+
+                            h6 {
+                                font-size: 20px;
+                                max-width: 300px;
+                                &::before{
+                                    left: 0;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                            }
+
+                            .rating {
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+
+                .privacy {
+                    p {
+                        width: 95%;
+                    }
+                }
+            }
+
+        }
+
+        &.dr-featured {
+            top: 80px;
+            margin-bottom: 46px;
+        }
+    }
+}

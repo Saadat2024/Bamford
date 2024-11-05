@@ -1,0 +1,84 @@
+// Location Start
+.three_columns {
+    margin: -20px auto 0;
+    font-size: 14px;
+    h2 {
+      font-size: 25px;
+      line-height: 30px;
+      color: #fff;
+    }
+    p {
+      letter-spacing: 1px;
+    }
+    .row {
+      @include flexbox;
+      [class*="col-"] {
+        background-color: $c2;
+        padding: 30px !important;
+        color: #fff;
+        text-align: center;
+        &:nth-child(2) {
+          background-color: $c1;
+        }
+        p {
+          font-style: 16px;
+        }
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    a:not(.btn) {
+      color: inherit;
+    }
+    @media all and (max-width: 767px) {
+     margin-top: 0; .col {min-height:1px;}
+    }
+    .col_1 {
+      background: $c1;
+    }
+    .col_2 {
+      background: $c2;
+    }
+    .col_3 {
+      background: $c1;
+    }
+    .col_4 {
+      background: $c2;
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+  
+    //find us
+    .find_us {
+      padding: 0 15px;
+    }
+    .three_columns {
+      margin: -50px 15px 50px;
+    }
+  }
+
+  @media all and (max-width: 991px) {
+    
+    // Find Us
+    .three_columns {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  
+  }
+
+  @media all and (max-width: 767px) {
+    
+  
+    .three_columns {
+      margin: -40px 0 50px;
+      .row [class*="col-"] {
+        padding: 15px 10px !important;
+      }
+    }
+  
+  }
+  // Location End

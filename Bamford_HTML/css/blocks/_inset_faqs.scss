@@ -1,0 +1,152 @@
+// FAQs
+.faqs {
+
+  position: relative;
+  padding-bottom: 250px;
+  margin: auto;
+  margin-bottom: 160px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    mask-image: url(../images/curve-mask.svg);
+    -webkit-mask-image: url(../images/curve-mask.svg);
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-position: bottom;
+    -webkit-mask-position: bottom;
+    opacity: 0.1;
+    z-index: -1;
+    background: linear-gradient(360deg, #623A95 0%, rgba(98, 58, 149, 0) 60%);
+    transform: scaleX(-1);
+
+    @media all and (max-width: 1180px) {
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-image: url(../images/curve-mask-3.svg);
+      -webkit-mask-image: url(../images/curve-mask-3.svg);
+
+    }
+  }
+
+  .title_section {
+    margin-bottom: 3px;
+
+    h2 {
+      margin-bottom: 0;
+      color: $c1;
+      font-weight: 500;
+    }
+  }
+
+  .accordion_container {
+
+    padding-right: 100px;
+
+    .plusminus {
+      font-size: 16px;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 13px);
+      transition: all .3s;
+      border: 0;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      padding: 25px 0 0;
+      text-align: center;
+      color: $c1;
+
+      &:after,
+      &:before {
+        display: block;
+        content: "";
+        width: 16px;
+        height: 2px;
+        background-color: $c1;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transition: all .3s;
+      }
+
+      &:after {
+        left: auto;
+        right: 0;
+        @include transform (rotate(90deg));
+        trnasform-origin: center;
+      }
+    }
+
+
+    .item {
+      border-bottom: 1px solid $ct;
+      transition: all .3s;
+
+      h3 {
+        margin-bottom: 0px;
+        position: relative;
+        transition: all 0.3s;
+        cursor: pointer;
+        padding: 30px 0px 25px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: none;
+        color: $c1;
+      }
+
+      &.active {
+        h3 {
+
+          .plusminus {
+            color: $ct;
+
+            &:before {
+              @include transform (rotate(360deg));
+            }
+
+            &:after {
+              @include transform (rotate(360deg));
+            }
+          }
+
+        }
+      }
+
+      .accordion_body {
+        display: none;
+
+        p {
+          margin-bottom: 20px;
+          color: $ct;
+          margin-right: 120px;
+        }
+
+        p:last-child {
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+
+    @media all and (max-width: 991px) {
+      padding-right: 0;
+
+      .item {
+        .accordion_body {
+          p {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// FAQs End

@@ -1,0 +1,337 @@
+//content_hero
+
+.content_hero {
+    background: $c2;
+    padding-top: 17px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $f2;
+        line-height: 1.2;
+        color: $ct;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+    }
+
+
+    h2 {
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: .3px;
+        margin-bottom: 10px;
+        position: relative;
+        top: -6px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    a {
+        color: $c1;
+
+        &:hover {
+            color: $c2;
+        }
+    }
+
+    li,
+    p {
+        strong {
+            color: inherit !important
+        }
+
+        a:not(.btn) {
+            text-decoration: underline;
+            color: inherit !important;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+
+    .cnt {
+        //margin-top: 34px;
+        margin-bottom: 155px;
+
+        .txt {
+            width: 75%;
+        }
+
+        .img {
+
+            img {
+                margin-bottom: -113px;
+                border-radius: 16px;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width:990px) {
+        padding-top: 15px;
+        padding-left: 9px;
+        padding-right: 9px;
+        .cnt {
+
+            .img {
+                padding-top: 30px;
+
+                img {
+
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 0px;
+        padding-right: 0px;
+        .cnt {
+            padding-left: 24px;
+            padding-right: 24px;
+            margin-bottom: 97px;
+
+            .txt {
+                width: 100%;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
+
+//content_hero END
+
+
+.inset_content {
+    padding: 10% 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $c5;
+        font-weight: 700;
+    }
+
+    p {
+        color: $ct;
+        font-size: 18px;
+        padding-left: 20px;
+    }
+}
+
+.inset-sbs {
+    position: relative;
+
+    .txt {
+        max-width: 80%;
+
+        h2 {
+            margin-bottom: 34px;
+        }
+    }
+
+    &.flip {
+        .row {
+            @include flex-direction(row-reverse);
+        }
+    }
+
+    &.white {
+        padding-top: 152px;
+        padding-bottom: 230px;
+
+        .img img {
+            border-radius: 16px;
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .3);
+        }
+
+        &.bottom-grey-bg-bar {
+            padding-bottom: 40px;
+            padding-top: 162px;
+        }
+    }
+
+    &.green-cnt {
+        background: transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 433px;
+            background: $c6;
+            z-index: -1;
+        }
+
+        .cnt {
+            background: $c2;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .img {
+            img {
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &.grey {
+        background: $c6;
+        padding-top: 159px;
+
+        &::after {
+            height: 112px;
+        }
+
+        .img img {
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .3);
+        }
+    }
+
+    &.green-edge {
+        background: $c2;
+        padding-top: 128px;
+        padding-bottom: 220px;
+
+        .img img {
+            border-radius: 16px;
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .3);
+        }
+    }
+
+    @media all and (max-width: 1300px) {
+        &.green-cnt .cnt {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .txt {
+            max-width: 100%;
+        }
+
+        &.green-edge{
+            padding-bottom: 120px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .img{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width:992px) {
+     
+
+        &.flip .row,
+        .row {
+            @include flex-direction(column-reverse);
+        }
+
+        .txt {
+            max-width: 100%;
+            padding: 38px 38px 0 38px;
+            h2{
+                margin-bottom: 16px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .img {
+         
+            text-align: center;
+
+            img {
+                max-width: 100% !important;
+            }
+        }
+        &.white{
+            padding: 92px 12px 63px;
+            &.bottom-grey-bg-bar {
+                padding-bottom: 65px;
+                padding-top: 48px;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        &.green-cnt {
+            padding: 0 24px !important;
+
+            .cnt {
+                padding: 0;
+                .txt{
+                    padding-top: 34px;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        &.grey{
+            padding:50px 0;
+            .cnt{
+                padding-left: 24px;
+                padding-right: 24px;
+                .img {
+                    img {
+                        border-radius: 16px;
+                    }
+                }
+                .txt{
+                    padding-top: 30px;
+                }
+            }
+            &::after{
+                display: none;
+            }
+        }
+        &.green-edge{
+            padding-top: 24px;
+            padding-bottom: 39px;
+            padding-left: 9px;
+            padding-right: 9px;
+            .txt{
+                padding-top: 32px;
+                
+                p{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
